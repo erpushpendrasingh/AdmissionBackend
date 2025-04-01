@@ -53,7 +53,11 @@ app.use("/api", dataRoutes);
 app.use("/api", userRouter);
 app.use("/api", blogRoute);
 app.use("/api", router);
-
+app.get("/", (req, res) => {
+ try {
+  res.send("Hello");
+ } catch (error) {}
+});
 app.listen(port, () => {
  console.log(`Server is running on port ${port}`);
 });
