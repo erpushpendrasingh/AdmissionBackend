@@ -58,6 +58,7 @@ app.get("/", (req, res) => {
   res.send("Hello");
  } catch (error) {}
 });
+
 app.listen(port, () => {
  console.log(`Server is running on port ${port}`);
 });
@@ -120,19 +121,7 @@ app.listen(port, () => {
 //     res.status(500).json({ message: "Internal server error" });
 //   }
 // });
-// app.get("/api/universities/:id", async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const university = await University.findById(id);
-//     if (!university) {
-//       return res.status(404).json({ message: "University not found" });
-//     }
-//     // console.log("Fetched university:", university);
-//     res.status(200).json(university);
-//   } catch (error) {
-//     res.status(500).json({ message: "Internal server error" });
-//   }
-// });
+
 // app.get("/api/universities/:state", async (req, res) => {
 //   try {
 //     res.send("chal ja bhosedi ke")
